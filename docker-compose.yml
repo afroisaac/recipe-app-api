@@ -23,7 +23,7 @@ services:
   
   db:
     image: postgres:13-alpine 
-    volume:
+    volumes:
       - dev-db-data:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=devdb
@@ -31,5 +31,5 @@ services:
       - POSTGRES_PASSWORD=chnageme
 
 
-volume:
+volumes:
   dev-db-data:
